@@ -1,8 +1,16 @@
+import About from "./Components/About"
+import Contact from "./Components/Contact"
+import Hero from "./Components/Hero"
+import Works from "./Components/Works"
+
 function App() {
 
   return (
     <div>
-      Hello world!
+      <Hero />
+      <About />
+      <Works />
+      <Contact />
     </div>
   )
 }
