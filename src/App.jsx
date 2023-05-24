@@ -11,7 +11,7 @@ const Container = styled.div`
   overflow-y: auto;
   scrollbar-width: none;
   color: white;
-  background: url("./images/img.jpg");
+  background: url("./images/bg.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

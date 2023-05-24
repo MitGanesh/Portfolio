@@ -1,5 +1,6 @@
 import React from 'react';
 import { styled } from 'styled-components';
+import { FaGithub, FaTwitter } from 'react-icons/fa';
 
 const Section = styled.div`
   width: 100%;
@@ -8,7 +9,7 @@ const Section = styled.div`
 `
 const Container = styled.div`
   width: 80%;
-  padding: 18px 0px;
+  padding: 34px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,8 +31,14 @@ const List = styled.ul`
 const ListItems = styled.li`
 
 `
-const Icons = styled.div``
-const Icon = styled.div``
+const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`
+const Icon = styled.span`
+  cursor: pointer;
+`
 
 const Navbar = () => {
   return (
@@ -47,7 +54,12 @@ const Navbar = () => {
           </List>
         </Links>
         <Icons>
-          Icons
+          <Icon>
+            <FaTwitter size={25} />
+          </Icon>
+          <Icon>
+            <FaGithub size={25} />
+          </Icon>
         </Icons>
       </Container>
     </Section>

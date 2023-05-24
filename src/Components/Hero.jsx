@@ -1,6 +1,8 @@
 import React from 'react';
 import { styled } from 'styled-components';
 import Navbar from './Navbar';
+import { Canvas } from '@react-three/fiber';
+import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
 
 const Section = styled.div`
   height: 100vh;
@@ -12,7 +14,7 @@ const Section = styled.div`
 `
 
 const Container = styled.div`
-  height: 100vh;
+  height: 85vh;
   scroll-snap-align: center;
   width: 80%;
   display: flex;
@@ -34,26 +36,27 @@ const Right = styled.div`
 `
 
 const Img = styled.img`
-  width: 550px;
-  height: 650px;
-  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
-  animation: animate 2s infinite ease alternate;
+  /* animation: animate 2s infinite ease alternate; */
 
-  @keyframes animate {
+  /* @keyframes animate {
     to{
       transform: translateY(20px);
     }
-  }
+  } */
 `
 
 const Title = styled.h1`
   font-size: 74px;
+  font-weight: bold;
+  color: transparent;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px white;
 `
 
 const InfoBox = styled.div`
@@ -86,16 +89,29 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Think. Make. Solve.</Title>
+          <Title>Front End Developer</Title>
           <InfoBox>
-            <InfoText>What I Do</InfoText>
+            {/* <InfoText>What I Do</InfoText> */}
           </InfoBox>
-          <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, dolorum mollitia! In dolores maiores laboriosam.</Desc>
+          <Desc>Hi, I'm Ganesh Mittha. A passionate Front-end React Developer based in Pune, India. </Desc>
           <Button>Know More</Button>
         </Left>
         <Right>
           {/* 3D Model */}
-          <Img src="./images/men.png" />
+          <Canvas style={{ width: '100%', height: '600px' }}>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Sphere args={[1, 200, 400]} scale={2.5}>
+              <MeshDistortMaterial
+                color="hotpink"
+                attach="material"
+                distort={0.5}
+                speed={2}
+              />
+            </Sphere>
+          </Canvas>
+          <Img src="./images/hero.png" />
         </Right>
       </Container>
     </Section>
