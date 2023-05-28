@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { styled } from 'styled-components';
+import { mobile } from '../responsive';
 
 const Section = styled.div`
   width: 100%;
@@ -17,6 +18,10 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 32px;
+
+  ${mobile({
+  width: '90%',
+})}
 `;
 
 const Card = styled.div`
@@ -28,6 +33,11 @@ const Card = styled.div`
   gap: 16px;
   /* border: 1px solid #DCD0FF; */
   -webkit-filter: blur(0.8);
+
+  ${mobile({
+  flexDirection: 'column',
+  padding: '6px'
+})}
 `
 const Screen = styled.a`
   width: 350px;
@@ -35,10 +45,18 @@ const Screen = styled.a`
   flex: 1;
   border-radius: 10px;
   background: ${props => `url(${props.src})`};
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+
+  &:hover{
+    scale: 1.03;
+  }
+
+  ${mobile({
+  display: 'none',
+})}
 `
 const Content = styled.div`
   flex: 1;
@@ -47,16 +65,28 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${mobile({
+    padding: '12px 0px',
+  })}
 `
 const Title = styled.div`
   font-size: 24px;
   text-align: center;
   font-weight: bold;
+
+  ${mobile({
+  fontSize: '18px'
+})}
 `
 const Info = styled.div`
   padding: 10px 24px;
   font-size: 16px;
   line-height: 1.5;
+
+  ${mobile({
+  fontSize: '12px',
+})}
 `
 const Links = styled.div`
   display: flex;
@@ -65,29 +95,36 @@ const Links = styled.div`
   gap: 48px;
 `
 
-const Icon = styled.div`
+const Icon = styled.a`
   display: flex;
+  color: white;
+  text-decoration: none;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+
+  &:hover{
+    scale: 1.05;
+  }
 `
 
 
 const Works = () => {
   return (
     <Section>
-      <Container>
+      <Container id='projects'>
         <Card>
-          <Screen src='https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' />
+          <Screen src='./images/pr1.png' href='https://cads-gm.netlify.app' target='_blank' />
           <Content>
-            <Title>CRYPTO APP</Title>
+            <Title>CAD&apos;s PRO</Title>
             <Info>
-              Crypto is a premier cryptocurrency listing website that provides a comprehensive platform for users to explore and engage with various cryptocurrencies. Additionally, Crypto understands the importance of personalization, offering both light and dark modes to cater to individual preferences. Crypto is the ultimate destination for crypto enthusiasts with real-time market data. Stay ahead of the market trends and unlock the potential of digital currencies with Crypto.</Info>
+              CAD&apos;s a Architectural Firm, where they specialize in end-to-end design, planning, and execution across multiple sectors with user-friendly interface allows you to explore our extensive portfolio of architectural projects and discover how we bring visions to life. From residential to commercial, industrial to institutional, team of experts is dedicated to delivering exceptional designs that surpass expectations.
+            </Info>
             <Links>
-              <Icon>
+              <Icon href='https://github.com/MitGanesh/CAD-PRO' target='_blank'>
                 <FaGithub size={30} /> Code
               </Icon>
-              <Icon>
+              <Icon href='https://cads-gm.netlify.app' target='_blank'>
                 <FaExternalLinkAlt size={25} /> Live
               </Icon>
             </Links>
@@ -95,18 +132,18 @@ const Works = () => {
         </Card>
         <Card>
           <Content>
-            <Title>NOVOZ E-COM</Title>
-            <Info>Novoz is a e-commerce website that offers a wide variety and range of apparels for fashion enthusiasts. With its user-friendly interface, Novoz provides a seamless and enjoyable shopping experience for customers. From trendy clothing to stylish accessories, Novoz caters to diverse fashion preferences, ensuring that customers can find the perfect items to suit their style.</Info>
+            <Title>TEXTIN APP</Title>
+            <Info>Unlock the Power of TextIn, Your Ultimate Text Editor for Effortless Styling, Formatting, and Operations. Seamlessly manipulate your text with ease, from converting cases to removing whitespace and much more, all within a user-friendly interface designed for convenience and productivity.</Info>
             <Links>
-              <Icon>
+              <Icon href='https://github.com/MitGanesh/Textin-Text.Editor-React' target='_blank'>
                 <FaGithub size={30} /> Code
               </Icon>
-              <Icon>
+              <Icon href='https://textin-text-gm.netlify.app' target='_blank'>
                 <FaExternalLinkAlt size={25} /> Live
               </Icon>
             </Links>
           </Content>
-          <Screen src='https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' />
+          <Screen src='./images/pr4.png' href='https://textin-text-gm.netlify.app' target='_blank' />
         </Card>
       </Container>
     </Section>

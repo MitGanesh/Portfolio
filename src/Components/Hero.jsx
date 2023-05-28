@@ -3,6 +3,7 @@ import { styled } from 'styled-components';
 import Navbar from './Navbar';
 import { Canvas } from '@react-three/fiber';
 import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
+import { mobile } from '../responsive';
 
 const Section = styled.div`
   height: 100vh;
@@ -20,6 +21,11 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${mobile({
+    width: '90%',
+    flexDirection: 'column',
+  })}
 `
 
 const Left = styled.div`
@@ -28,11 +34,19 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+
+  ${mobile({
+    gap: '32px',
+  })}
 `
 
 const Right = styled.div`
   flex: 3;
   position: relative;
+
+  ${mobile({
+    display: 'none',
+  })}
 `
 
 const Img = styled.img`
@@ -42,13 +56,6 @@ const Img = styled.img`
   bottom: 0;
   right: 0;
   margin: auto;
-  /* animation: animate 2s infinite ease alternate; */
-
-  /* @keyframes animate {
-    to{
-      transform: translateY(20px);
-    }
-  } */
 `
 
 const Title = styled.h1`
@@ -57,6 +64,10 @@ const Title = styled.h1`
   color: transparent;
   text-transform: uppercase;
   -webkit-text-stroke: 1px white;
+
+  ${mobile({
+    fontSize: '60px',
+  })}
 `
 
 const InfoBox = styled.div`
@@ -68,16 +79,23 @@ const InfoText = styled.h2`
 `
 
 const Desc = styled.p`
-  font-size: 24px;
+  font-size: 22px;
   color: lightgray;
+
+  ${mobile({
+    fontSize: '16px',
+  })}
 `
 
-const Button = styled.button`
+const Button = styled.a`
+  margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
   width: 140px;
   padding: 12px 18px;
   border: none;
   color: white;
-  background: hotpink;
+  background: #fda5d6;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
@@ -90,11 +108,8 @@ const Hero = () => {
       <Container>
         <Left>
           <Title>Front End Developer</Title>
-          <InfoBox>
-            {/* <InfoText>What I Do</InfoText> */}
-          </InfoBox>
-          <Desc>Hi, I'm Ganesh Mittha. A passionate Front-end React Developer based in Pune, India. </Desc>
-          <Button>Know More</Button>
+          <Desc>Hi, I'm Ganesh Mittha. A passionate Front-end React Developer based in Pune Maharashtra. </Desc>
+          <Button href='#about'>Know More</Button>
         </Left>
         <Right>
           {/* 3D Model */}
