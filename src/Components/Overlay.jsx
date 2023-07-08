@@ -9,7 +9,7 @@ const Container = styled(motion.div)`
   z-index: 100;
   box-sizing: border-box;
   position: absolute;
-  display: ${prop => prop.flag ? 'flex' : 'none'};
+  display: ${prop => prop.flag ? 'none' : 'flex'};
   justify-content: center;
   align-items: center;
   background: url("./images/bg.jpeg");
@@ -20,7 +20,7 @@ const Container = styled(motion.div)`
 `
 
 const Overlay = () => {
-  const [showOverlay, setShowOverlay] = useState(true);
+  const [showOverlay, setShowOverlay] = useState(false);
   const fadeOutVariants = {
     visible: { opacity: 1 },
     hidden: {
@@ -34,7 +34,7 @@ const Overlay = () => {
 
   useEffect(() => {
     const id = setTimeout(() => {
-      setShowOverlay(false);
+      setShowOverlay(true);
     }, 4000);
 
     return () => {
