@@ -4,6 +4,8 @@ import Contact from "./Components/Contact";
 import Hero from "./Components/Hero";
 import Works from "./Components/Works";
 import Project from "./Components/Work2";
+import TostProvider from "./Components/TostProvider";
+import Overlay from "./Components/Overlay";
 
 const Container = styled.div`
   height: 100vh;
@@ -25,6 +27,8 @@ function App() {
 
   return (
     <Container>
+      <TostProvider />
+      <Overlay />
       <Hero />
       <About />
       <Works />

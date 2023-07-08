@@ -2,6 +2,7 @@ import React from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { styled } from 'styled-components';
 import { mobile } from '../responsive';
+import { copyToClipboard } from '../utils';
 
 const Section = styled.div`
   width: 100%;
@@ -114,7 +115,30 @@ const Works = () => {
     <Section>
       <Container id='projects'>
         <Card>
-          <Screen src='./images/pr2.png' href='https://crypto-gm.netlify.app' target='_blank' />
+          <Screen src='./images/pr5.png' href='https://mix-melo-app.vercel.app' target='_blank' />
+          <Content>
+            <Title>MixMelo Music App</Title>
+            <Info>
+              MixMelo is a cutting-edge music app that offers a seamless and personalized
+              listening experience, much like Spotify.
+              MixMelo allows users to discover and enjoy their favorite tunes effortlessly along with
+              that users can create custom playlists, explore curated playlists, and access a wide range of music tailored to their preferences.
+              <br />
+              User ID: <span onClick={() => copyToClipboard('adok@yopmail.com')} style={{ color: '#fda5d6', cursor: 'pointer' }}>adok@yopmail.com</span>
+              <br />
+              password: <span onClick={() => copyToClipboard('qwer1234')} style={{ color: '#fda5d6', cursor: 'pointer' }}>qwer1234</span>
+            </Info>
+            <Links>
+              <Icon href='https://github.com/Ganesh-mBit/MixMelo-App' target='_blank'>
+                <FaGithub size={30} /> Code
+              </Icon>
+              <Icon href='https://mix-melo-app.vercel.app' target='_blank'>
+                <FaExternalLinkAlt size={25} /> Live
+              </Icon>
+            </Links>
+          </Content>
+        </Card>
+        <Card>
           <Content>
             <Title>CRYPTO APP</Title>
             <Info>
@@ -128,21 +152,7 @@ const Works = () => {
               </Icon>
             </Links>
           </Content>
-        </Card>
-        <Card>
-          <Content>
-            <Title>NOVOZ E-COM</Title>
-            <Info>Novoz is a e-commerce website that offers a wide variety and range of apparels for fashion enthusiasts. With its user-friendly interface, Novoz provides a seamless and enjoyable shopping experience for customers. From trendy clothing to stylish accessories, Novoz caters to diverse fashion preferences, ensuring that customers can find the perfect items to suit their style.</Info>
-            <Links>
-              <Icon href='https://github.com/MitGanesh/Novoz-Ecom' target='_blank'>
-                <FaGithub size={30} /> Code
-              </Icon>
-              <Icon href='https://novoz-ecom-gm.netlify.app' target='_blank'>
-                <FaExternalLinkAlt size={25} /> Live
-              </Icon>
-            </Links>
-          </Content>
-          <Screen src='./images/pr3.png' href='https://novoz-ecom-gm.netlify.app' target='_blank' />
+          <Screen src='./images/pr2.png' href='https://crypto-gm.netlify.app' target='_blank' />
         </Card>
       </Container>
     </Section>
