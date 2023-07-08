@@ -67,8 +67,8 @@ const Content = styled.div`
   align-items: center;
 
   ${mobile({
-    padding: '12px 0px',
-  })}
+  padding: '12px 0px',
+})}
 `
 const Title = styled.div`
   font-size: 24px;
@@ -114,7 +114,21 @@ const Works = () => {
     <Section>
       <Container id='projects'>
         <Card>
-          <Screen src='./images/pr1.png' href='https://cads-gm.netlify.app' target='_blank' />
+          <Screen src='./images/pr3.png' href='https://novoz-ecom-gm.netlify.app' target='_blank' />
+          <Content>
+            <Title>NOVOZ E-COM</Title>
+            <Info>Novoz is a e-commerce website that offers a wide variety and range of apparels for fashion enthusiasts. With its user-friendly interface, Novoz provides a seamless and enjoyable shopping experience for customers. From trendy clothing to stylish accessories, Novoz caters to diverse fashion preferences, ensuring that customers can find the perfect items to suit their style.</Info>
+            <Links>
+              <Icon href='https://github.com/MitGanesh/Novoz-Ecom' target='_blank'>
+                <FaGithub size={30} /> Code
+              </Icon>
+              <Icon href='https://novoz-ecom-gm.netlify.app' target='_blank'>
+                <FaExternalLinkAlt size={25} /> Live
+              </Icon>
+            </Links>
+          </Content>
+        </Card>
+        <Card>
           <Content>
             <Title>CAD&apos;s PRO</Title>
             <Info>
@@ -129,21 +143,7 @@ const Works = () => {
               </Icon>
             </Links>
           </Content>
-        </Card>
-        <Card>
-          <Content>
-            <Title>TEXTIN APP</Title>
-            <Info>Unlock the Power of TextIn, Your Ultimate Text Editor for Effortless Styling, Formatting, and Operations. Seamlessly manipulate your text with ease, from converting cases to removing whitespace and much more, all within a user-friendly interface designed for convenience and productivity.</Info>
-            <Links>
-              <Icon href='https://github.com/MitGanesh/Textin-Text.Editor-React' target='_blank'>
-                <FaGithub size={30} /> Code
-              </Icon>
-              <Icon href='https://textin-text-gm.netlify.app' target='_blank'>
-                <FaExternalLinkAlt size={25} /> Live
-              </Icon>
-            </Links>
-          </Content>
-          <Screen src='./images/pr4.png' href='https://textin-text-gm.netlify.app' target='_blank' />
+          <Screen src='./images/pr1.png' href='https://cads-gm.netlify.app' target='_blank' />
         </Card>
       </Container>
     </Section>

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.animation > div {
+  text-align: center;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  text-align: center;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 3s infinite;
+}
+
+/* .first div {
+  background-color:#20a7d8;
+}
+.second div {
+  background-color:#CD921E;
+}
+.third div {
+  background-color:#c10528;
+}
+.fourth div {
+  background-color:orange;
+} */
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.35rem;}
+  60% {margin-top: -11.35rem;}
+  70% {margin-top: -17.25rem;}
+  80% {margin-top: -17.25rem;}
+  90% {margin-top: -23.25rem;}
+  100% {margin-top: -23.25rem;}
+}

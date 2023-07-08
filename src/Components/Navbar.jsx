@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from 'styled-components';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { mobile } from '../responsive';
+import { SiLinkedin } from 'react-icons/si';
 
 const Section = styled.div`
   width: 100%;
@@ -16,8 +17,8 @@ const Container = styled.div`
   align-items: center;
 
   ${mobile({
-    width: '90%',
-  })}
+  width: '90%',
+})}
 `
 const Logo = styled.div`
   font-size: 26px;
@@ -42,8 +43,8 @@ const List = styled.ul`
   list-style: none;
 
   ${mobile({
-    display: 'none',
-  })}
+  display: 'none',
+})}
 `
 const ListItems = styled.a`
   color: white;
@@ -86,8 +87,8 @@ const Navbar = () => {
           <Icon href='https://github.com/MitGanesh' target='_blank'>
             <FaGithub size={25} />
           </Icon>
-          <Icon href='https://twitter.com/GaneshMittha3' target='_blank'>
-            <FaTwitter size={25} />
+          <Icon href='https://www.linkedin.com/in/ganesh-mittha' target='_blank'>
+            <SiLinkedin size={25} />
           </Icon>
         </Icons>
       </Container>
